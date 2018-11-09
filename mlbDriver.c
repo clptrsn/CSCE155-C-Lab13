@@ -10,7 +10,7 @@ extern int NUM_TEAMS;
 int main(int argc, char **argv[]) {
   char filePath[] = "data/mlb_nl_2011.txt";
 
-  Team *teams = readFile(fileName);
+  Team *teams = readFile(filePath);
 
   printf("Teams, original order: \n");
   printAllTeams(teams, NUM_TEAMS);
