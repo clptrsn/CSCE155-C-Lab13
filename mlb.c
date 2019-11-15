@@ -29,12 +29,14 @@ void printTeam(const Team *t) {
     return;
   }
   double winPerc = t->wins / (double)(t->wins + t->loss);
-  printf("%-10s %3d %3d (%4.3f) %-15s %2s $%12.2f $%9.2f\n", t->name, t->wins,
+  printf("%-10s %3d  %3d (%4.3f) %-15s %2s $%12.2f $%9.2f\n", t->name, t->wins,
          t->loss, winPerc, t->city, t->state, t->payroll, t->averageSalary);
 }
 
 void printAllTeams(Team *teams, int size) {
   int i;
+  printf("%-9s %-4s %-4s (%-4s) %-12s %-2s %-13s %-11s\n", "Name", "Wins",
+           "Loss", "Win %", "City", "State", "Payroll", "Avg Salary");
   for (i = 0; i < size; i++) {
     printTeam(&teams[i]);
   }
