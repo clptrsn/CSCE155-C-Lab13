@@ -1,5 +1,5 @@
 
-CC = gcc
+CC = gcc -std=gnu99
 
 mlbDemo: mlbDriver.c mlb.o
 	$(CC) -o mlbDriver mlb.o mlbDriver.c
